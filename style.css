@@ -1,0 +1,163 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+min-height:100vh;
+background: linear-gradient(135deg,#ff9ecb,#ffc7d9,#ffdce6);
+display:flex;
+flex-direction:column;
+align-items:center;
+color:#333;
+}
+
+/* HEADER */
+
+header{
+text-align:center;
+padding:60px 20px;
+animation: fadeIn 1.5s ease;
+}
+
+header h1{
+font-size:48px;
+font-weight:700;
+color:#fff;
+text-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+header p{
+margin-top:10px;
+font-size:18px;
+color:#fff;
+opacity:0.9;
+}
+
+/* NAVIGATION */
+
+nav{
+display:flex;
+gap:30px;
+margin-bottom:40px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+nav a{
+text-decoration:none;
+padding:10px 20px;
+border-radius:10px;
+background:rgba(255,255,255,0.2);
+backdrop-filter: blur(10px);
+color:white;
+font-weight:600;
+transition:0.3s;
+}
+
+nav a:hover{
+background:white;
+color:#ff4f90;
+transform:translateY(-3px);
+}
+
+/* CARD */
+
+.card{
+width:90%;
+max-width:700px;
+padding:40px;
+
+background:rgba(255,255,255,0.85);
+
+border-radius:20px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,0.2);
+
+text-align:center;
+
+animation: fadeUp 1.2s ease;
+}
+
+.card h2{
+font-size:32px;
+margin-bottom:20px;
+color:#222;
+}
+
+.card p{
+font-size:18px;
+line-height:1.6;
+color:#444;
+}
+
+/* BUTTON */
+
+button{
+margin-top:20px;
+padding:15px 30px;
+border:none;
+border-radius:12px;
+
+background:linear-gradient(45deg,#ff4f90,#ff6fa5);
+
+color:white;
+font-size:16px;
+font-weight:600;
+
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+box-shadow:0 10px 25px rgba(255,0,120,0.4);
+}
+
+/* GALLERY */
+
+.gallery{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:20px;
+}
+
+.gallery img{
+width:200px;
+border-radius:15px;
+transition:0.4s;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.gallery img:hover{
+transform:scale(1.1);
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(-20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
