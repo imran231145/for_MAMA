@@ -6,12 +6,18 @@ font-family: 'Segoe UI', sans-serif;
 }
 
 body{
+margin:0;
 min-height:100vh;
-background: linear-gradient(135deg,#ff9ecb,#ffc7d9,#ffdce6);
+font-family:'Segoe UI',sans-serif;
+
+background: linear-gradient(90deg,#ffd6e7,#ffe9f1,#ffd6e7);
+
+background-size:200% 200%;
+animation: backgroundMove 10s ease infinite;
+
 display:flex;
 flex-direction:column;
 align-items:center;
-color:#333;
 }
 
 /* HEADER */
@@ -160,4 +166,72 @@ to{
 opacity:1;
 transform:translateY(0);
 }
+}
+
+@keyframes backgroundMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+body::before{
+content:"";
+position:fixed;
+
+width:500px;
+height:500px;
+
+background:#ffb3d1;
+
+border-radius:50%;
+
+filter:blur(180px);
+
+top:-100px;
+left:-100px;
+
+animation: lightMove 12s infinite alternate;
+
+z-index:-1;
+}
+
+body::after{
+content:"";
+position:fixed;
+
+width:500px;
+height:500px;
+
+background:#ffd6e7;
+
+border-radius:50%;
+
+filter:blur(180px);
+
+bottom:-100px;
+right:-100px;
+
+animation: lightMove2 14s infinite alternate;
+
+z-index:-1;
+}
+
+@keyframes lightMove{
+from{transform:translate(0,0)}
+to{transform:translate(200px,150px)}
+}
+
+@keyframes lightMove2{
+from{transform:translate(0,0)}
+to{transform:translate(-200px,-150px)}
 }
